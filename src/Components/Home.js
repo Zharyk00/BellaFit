@@ -1,11 +1,13 @@
 import '../Styles/Home/Home.css'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import { BiMap, BiPhoneCall, BiMessageDetail } from 'react-icons/bi'
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
 import { Pagination } from "swiper";
+import { Link } from 'react-router-dom';
 
 function Home() {
     const [value, setValue] = useState(500)
@@ -149,6 +151,49 @@ function Home() {
                     </section>
                 </main>
             </div>
+            <footer>
+                <main className='footer_content'>
+                    <figure className='logo'>
+                        <Link to={'/'} className='circle'>
+                            <div className='vertical_lines'></div>
+                            <div className='vertical_lines'></div>
+                            <div className='horizontal_line'></div>
+                        </Link>
+                        <figcaption><Link to={'/'}>BellaFit</Link></figcaption>
+                    </figure>
+                    <ul>
+                        <li>ABOUT US</li>
+                        <li>BLOG</li>
+                        <li>SHOP</li>
+                        <li>CONTACT</li>
+                        <li>SALE</li>
+                    </ul>
+                    <ul>
+                        <li>CARDIO CLASSED</li>
+                        <li>HARD TRENING</li>
+                        <li>STRETCHING</li>
+                        <li>IRON TRENING</li>
+                        <li>LIGHT BOXING</li>
+                        <li>YOGA</li>
+                    </ul>
+                    <ul>
+                        <li>FACEBOOK</li>
+                        <li>INSTAGRAM</li>
+                        <li>TWITTER</li>
+                    </ul>
+                    <ul className='with_icons'>
+                        <li> <BiMap size={'20px'} color={'#FAFF05'} />132 DARTMOUTH STREET BOSTON, MASSACHUSETTS 02156 UNITED STATES</li>
+                        <li> <BiPhoneCall size={'20px'} color={'#FAFF05'} />+1012 3456 789</li>
+                        <li><BiMessageDetail size={'20px'} color={'#FAFF05'} />BELLAFIT@GMAIL.COM</li>
+                    </ul>
+                </main>
+                <hr style={{ backgroundColor: 'grey', height: '2px', border: 'none' }} />
+                <div className='last_footer_cont'>
+                    <h4>COOKIES POLICY</h4>
+                    <h4> LEGAL TERMS</h4>
+                    <h4 >PRIVACY POLICY</h4>
+                </div>
+            </footer>
         </div>
     )
 }

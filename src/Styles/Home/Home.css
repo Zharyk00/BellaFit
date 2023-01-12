@@ -296,4 +296,96 @@
   border: 1px solid #FAFF05;
   transform: rotate(90deg);
   margin-left: 12px;
+}
+.main_home_content footer {
+  display: grid;
+  height: auto;
+  grid-template-rows: 4fr 0.5fr 1fr;
+  background-color: #100E18;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+@media (max-width: 415px) {
+  .main_home_content footer {
+    grid-template-rows: 5fr 0.5fr 0.5fr;
+  }
+}
+.main_home_content footer .footer_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: start;
+  padding: 40px 50px;
+}
+@media (max-width: 415px) {
+  .main_home_content footer .footer_content {
+    justify-items: start;
+    row-gap: 10px;
+    padding: 40px 30px;
+  }
+}
+.main_home_content footer .footer_content ul {
+  display: grid;
+  row-gap: 20px;
+}
+.main_home_content footer .footer_content .with_icons > li {
+  display: grid;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  grid-auto-flow: column;
+  justify-content: start;
+}
+.main_home_content footer .footer_content .logo {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: start;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@media (max-width: 415px) {
+  .main_home_content footer .footer_content .logo {
+    display: none;
+  }
+}
+.main_home_content footer .footer_content .logo .circle {
+  display: grid;
+  grid-auto-flow: column;
+  width: 50px;
+  height: 50px;
+  background: #f80a0a;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.main_home_content footer .footer_content .logo .circle .vertical_lines {
+  height: 10.59px;
+  border: 1px solid #FAFF05;
+}
+.main_home_content footer .footer_content .logo .circle .horizontal_line {
+  width: 10.59px;
+  border: 1px solid #FAFF05;
+}
+.main_home_content footer .footer_content .logo figcaption {
+  margin-top: 16px;
+  font-size: 20px;
+}
+.main_home_content footer .footer_content .logo figcaption a {
+  color: white;
+}
+.main_home_content footer .last_footer_cont {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media (max-width: 415px) {
+  .main_home_content footer .last_footer_cont {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 20px;
+  }
 }/*# sourceMappingURL=Home.css.map */

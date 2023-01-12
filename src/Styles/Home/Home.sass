@@ -227,3 +227,71 @@
                         border: 1px solid #FAFF05
                         transform: rotate(90deg)
                         margin-left: 12px
+    footer
+        display: grid
+        height: auto
+        grid-template-rows: 4fr 0.5fr 1fr
+        background-color: #100E18
+        color: #FFFFFF
+        font-size: 14px
+        @media (max-width: 415px)
+            grid-template-rows: 5fr 0.5fr 0.5fr
+
+        .footer_content
+            display: grid
+            grid-template-columns: repeat(auto-fit , minmax(200px , 1fr))
+            justify-items: center
+            align-items: start
+            padding: 40px 50px
+            @media (max-width: 415px)
+                justify-items: start
+                row-gap: 10px
+                padding: 40px 30px
+
+            ul
+                display: grid
+                row-gap: 20px
+            .with_icons > li
+                display: grid
+                column-gap: 15px
+                grid-auto-flow: column
+                justify-content: start
+
+            .logo
+                display: grid
+                grid-auto-flow: column
+                align-items: start
+                justify-content: center
+                column-gap: 10px
+                @media (max-width: 415px)
+                    display: none
+                .circle
+                    display: grid
+                    grid-auto-flow: column
+                    width: 50px
+                    height: 50px
+                    background: #f80a0a
+                    border-radius: 50%
+                    justify-content: center
+                    align-items: center
+                    column-gap: 5px
+                    .vertical_lines
+                        height: 10.59px
+                        border: 1px solid #FAFF05
+                    .horizontal_line
+                        width: 10.59px
+                        border: 1px solid #FAFF05
+                figcaption
+                    margin-top: 16px
+                    font-size: 20px
+                    a
+                        color: white
+        .last_footer_cont
+            display: grid
+            grid-auto-flow: column
+            place-content: center
+            column-gap: 40px
+            @media (max-width: 415px)
+                display: grid
+                grid-auto-flow: row
+                row-gap: 20px
