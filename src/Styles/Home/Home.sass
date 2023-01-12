@@ -1,12 +1,16 @@
 .main_home_content
     display: grid
-    // row-gap: 100px
+    grid-template-columns: auto
     .content
         display: grid
         margin-bottom: 100px
         background-color: #C3140F
         height: 600px
+        width: 100%
         grid-template-columns: repeat(auto-fit , minmax(350px , 1fr))
+        @media (max-width: 415px)
+            height: auto
+            width: 100%
         // .fitness
         //     height: 100%
         //     font-size: 120px
@@ -24,9 +28,14 @@
             display: grid
             row-gap: 50px
             place-content: center
+            @media (max-width: 415px)
+                justify-content: start
+                padding: 30px 0px 0px 20px
             .home_header
                 font-size: 40px
                 color: white
+                @media (max-width: 415px)
+                    font-size: 33px
             .home_button
                 width: 130px
                 height: 36px
@@ -37,6 +46,8 @@
             display: grid
             align-content: end
             justify-content: center
+            @media (max-width: 415px)
+                justify-content: center
             .back_frame
                 display: grid
                 place-content: center
@@ -44,6 +55,11 @@
                 align-self: end
                 width: 350px
                 border: 30px solid #FAFF05
+                @media (max-width: 415px)
+                    width: 220px
+                    height: 250px
+                    border: 20px solid #FAFF05
+
             .img
                 display: grid
                 justify-self: center
@@ -53,6 +69,10 @@
                 width: 300px
                 background-repeat: no-repeat
                 background-size: contain
+                @media (max-width: 415px)
+                    width: 200px
+                    height: 350px
+                    align-self: end
 
         .home_image > *
             grid-column: 1 /-1
@@ -60,15 +80,20 @@
     .info_block
         display: grid
         margin-bottom: 100px
-        justify-items: center
         justify-content: center
+        justify-items: center
         grid-template-columns: 60%
         row-gap: 30px
         line-height: 36px
+        @media (max-width: 415px)
+            line-height: 30px
+            justify-items: center
         .bellafit_info
             display: grid
             justify-items: center
             font-size: 25px
+            @media (max-width: 415px)
+                font-size: 18px
 
         .bellafit
             font-size: 20px
@@ -80,6 +105,11 @@
             background: #FAFF05
             border: none
             font-weight: bold
+            @media (max-width: 415px)
+                width: 320px
+                height: 50px
+                border-radius: 10px
+
     .back_image
         display: grid
         grid-template-columns: .8fr
@@ -91,6 +121,8 @@
         background-repeat: no-repeat
         height: 700px
         width: 100%
+        @media (max-width: 415px)
+            height: 500px
         .front_content
             display: grid
             row-gap: 20px
@@ -98,6 +130,8 @@
             justify-items: center
             color: white
             text-align: center
+            @media (max-width: 415px)
+                justify-items: start
             .aside_content
                 display: grid
                 padding: 0px 10px
@@ -148,6 +182,15 @@
         background-repeat: no-repeat
         height: 650px
         width: 100%
+        @media (max-width: 415px)
+            background-size: contain
+            justify-content: center
+            height: 850px
+            & > *
+                grid-column: 1 /-1
+                grid-row: 1/ -1
+                height: 500px
+
         .rule_block
             display: grid
             place-items: center
@@ -156,6 +199,10 @@
             width: 350px
             margin: 100px 200px 0px 0px
             background-color: #CCCFD8
+            @media (max-width: 415px)
+                margin: 0px
+                width: 300px
+                background-color: #f3efef
             section
                 display: grid
                 justify-items: start

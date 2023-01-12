@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 import '../Styles/Nav/Nav.css'
 import { FiSearch, FiHeart, FiUser } from 'react-icons/fi'
 import { AiOutlineShopping } from 'react-icons/ai'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 function Nav() {
     const [discout, setDiscout] = useState(20)
@@ -21,6 +22,7 @@ function Nav() {
                     </Link>
                     <figcaption><Link to={'/home'}>BellaFit</Link></figcaption>
                 </figure>
+                <article><GiHamburgerMenu /></article>
                 <nav className='nav_links'>
                     <Link to={'/about'}>About Us</Link>
                     <Link to={'/Sale'}>Sale <sup style={{ position: 'absolute', color: '#C4140F', fontSize: '14px', marginLeft: '3px', }}>{discout}%</sup></Link>
@@ -30,14 +32,14 @@ function Nav() {
                 </nav>
                 <div className='icons'>
                     <FiSearch />
-                    <FiHeart />
+                    <FiUser />
                     <div style={{ marginRight: '12px' }}>
                         <div className='div'>
                             <AiOutlineShopping />
                             <sup style={{ position: 'absolute', backgroundColor: 'yellow', width: '18px' }}>{cart}</sup>
                         </div>
                     </div>
-                    <FiUser />
+                    <FiHeart />
                 </div>
 
             </section>

@@ -2,7 +2,6 @@
     display: grid
     grid-auto-flow: row
     grid-template-rows: 40px 80px
-
     @media (max-width: 415px)
         grid-template-rows: 60px
 
@@ -26,7 +25,8 @@
         background-color: #FFFFFF
         grid-auto-flow: column
         @media (max-width: 415px)
-            grid-template-columns: 1fr 1fr
+            grid-template-columns: .9fr 1fr
+            justify-items: center
         .logo
             display: grid
             grid-auto-flow: column
@@ -57,14 +57,19 @@
             justify-content: center
             column-gap: 50px
             color: #100E18
+            @media (max-width: 415px)
+                display: none
             a
                 color: #100E18
                 font-size: 20px
-        .burger_menu
-            display: grid
-            grid-auto-flow: row
-            z-index: 1
-            row-gap: 20px
+        article
+            display: none
+            @media (max-width: 415px)
+                display: block
+                display: grid
+                justify-self: start
+                margin-left: 20px
+                font-size: 20px
 
         .icons
             display: grid
@@ -73,8 +78,7 @@
             column-gap: 30px
             font-size: 18px
             @media (max-width: 415px)
-                display: grid
-
+                justify-content: start
             .div
                 position: absolute
                 text-align: center
