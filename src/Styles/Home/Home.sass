@@ -11,18 +11,22 @@
         @media (max-width: 415px)
             height: auto
             width: 100%
-        // .fitness
-        //     height: 100%
-        //     font-size: 120px
-        //     left: 290px
-        //     top: 400px
-        //     position: absolute
-        //     font-family: 'Amatic SC', sans-serif
-        //     letter-spacing: 65px
-        //     color: #fff
-        //     opacity: 0.2
-        //     -webkit-text-stroke: 1px white
-        //     -webkit-text-fill-color: transparent
+        .fitness
+            font-size: 120px
+            left: 290px
+            top: 400px
+            position: absolute
+            font-family: 'Amatic SC', sans-serif
+            letter-spacing: 65px
+            color: #fff
+            opacity: 0.2
+            -webkit-text-stroke: 1px white
+            -webkit-text-fill-color: transparent
+            @media (max-width: 415px)
+                font-size: 50px
+                letter-spacing: 10px
+                left: 60px
+                top: 275px
 
         .home_content
             display: grid
@@ -123,6 +127,8 @@
         width: 100%
         @media (max-width: 415px)
             height: 500px
+            grid-template-rows: 0.2fr 1fr
+            background-position: center
         .front_content
             display: grid
             row-gap: 20px
@@ -141,6 +147,8 @@
                 border-top: none
                 box-sizing: border-box
                 backgroud-color: rgba(255, 99, 71, 0.1)
+                @media (max-width: 415px)
+                    height: 350px
                 h1
                     font-size: 35px
                     line-height: 30px
@@ -153,6 +161,8 @@
                 width: 280px
                 background-color: #FAFF05
                 box-sizing: border-box
+                @media (max-width: 415px)
+                    height: 350px
                 h1
                     font-size: 35px
                     line-height: 30px

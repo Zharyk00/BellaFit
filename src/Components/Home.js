@@ -1,23 +1,24 @@
 import '../Styles/Home/Home.css'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "./styles.css";
-
-// import required modules
 import { Pagination } from "swiper";
 
 function Home() {
+    const [value, setValue] = useState(true)
+    function reportWindowSize() {
+        let size = window.innerWidth;
+        setValue(size)
+    }
+    window.addEventListener("resize", reportWindowSize);
+    console.log(value);
     return (
         <div className='main_home_content'>
             <main className='content'>
-                {/* <p className='fitness'>FITNESS</p> */}
+                <p className='fitness'>FITNESS</p>
                 <section className='home_content'>
                     <p style={{ color: 'white' }}>1/3</p>
                     <div style={{ borderBottom: '1px solid #FAFF05', width: '80px' }}></div>
@@ -44,41 +45,84 @@ function Home() {
             </div>
             <div className='back_image'>
                 <div></div>
-                <main className='front_content'>
-                    <section className='aside_content'>
-                        <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
-                        <h1>stretch <br />&recovery</h1>
-                        <p>
-                            If your goals are to improve your overall health and wellness,
-                            we have everything you need. We have cardio equipment
-                            spanning two floors including 8 stepmills.
-                        </p>
-                    </section>
-                    <section className='center_content'>
-                        <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
-                        <h1>personal <br />trening</h1>
-                        <p>
-                            If your goals are to improve your overall health and wellness,
-                            we have everything you need. We have
-                            cardio equipment spanning two floors including 8 stepmills.
-                        </p>
-                        <div className='inner_content'>
-                            <button style={{ color: 'red', fontWeight: 'bold', border: 'none', background: 'none' }}>START NOW</button>
-                            <div className='circle'><HiOutlineArrowNarrowRight style={{ fontSize: '30px' }} color="red" /></div>
-                        </div>
+                {value > 415 ?
+                    <main className='front_content'>
+                        <section className='aside_content'>
+                            <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
+                            <h1>stretch <br />&recovery</h1>
+                            <p>
+                                If your goals are to improve your overall health and wellness,
+                                we have everything you need. We have cardio equipment
+                                spanning two floors including 8 stepmills.
+                            </p>
+                        </section>
+                        <section className='center_content'>
+                            <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
+                            <h1>personal <br />trening</h1>
+                            <p>
+                                If your goals are to improve your overall health and wellness,
+                                we have everything you need. We have
+                                cardio equipment spanning two floors including 8 stepmills.
+                            </p>
+                            <div className='inner_content'>
+                                <button style={{ color: 'red', fontWeight: 'bold', border: 'none', background: 'none' }}>START NOW</button>
+                                <div className='circle'><HiOutlineArrowNarrowRight style={{ fontSize: '30px' }} color="red" /></div>
+                            </div>
 
-                    </section>
-                    <section className='aside_content'>
-                        <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
-                        <h1>group <br />treniing</h1>
-                        <p >
-                            If your goals are to improve your overall health and wellness,
-                            we have everything you need.
-                            We have cardio equipment spanning two floors including 8 stepmills.
-                        </p>
+                        </section>
+                        <section className='aside_content'>
+                            <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
+                            <h1>group <br />treniing</h1>
+                            <p >
+                                If your goals are to improve your overall health and wellness,
+                                we have everything you need.
+                                We have cardio equipment spanning two floors including 8 stepmills.
+                            </p>
 
-                    </section>
-                </main>
+                        </section>
+                    </main> :
+                    <main className='front_content'>
+                        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+                            <SwiperSlide><section className='center_content'>
+                                <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
+                                <h1>personal <br />trening</h1>
+                                <p>
+                                    If your goals are to improve your overall health and wellness,
+                                    we have everything you need. We have
+                                    cardio equipment spanning two floors including 8 stepmills.
+                                </p>
+                                <div className='inner_content'>
+                                    <button style={{ color: 'red', fontWeight: 'bold', border: 'none', background: 'none' }}>START NOW</button>
+                                    <div className='circle'><HiOutlineArrowNarrowRight style={{ fontSize: '30px' }} color="red" /></div>
+                                </div>
+
+                            </section></SwiperSlide>
+                            <SwiperSlide><section className='aside_content'>
+                                <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
+                                <h1>stretch <br />&recovery</h1>
+                                <p>
+                                    If your goals are to improve your overall health and wellness,
+                                    we have everything you need. We have cardio equipment
+                                    spanning two floors including 8 stepmills.
+                                </p>
+                            </section></SwiperSlide>
+                            <SwiperSlide><section className='aside_content'>
+                                <hr style={{ backgroundColor: '#FAFF05', height: '2px', border: 'none' }} />
+                                <h1>group <br />treniing</h1>
+                                <p >
+                                    If your goals are to improve your overall health and wellness,
+                                    we have everything you need.
+                                    We have cardio equipment spanning two floors including 8 stepmills.
+                                </p>
+
+                            </section></SwiperSlide>
+                        </Swiper>
+
+
+
+                    </main>
+
+                }
             </div>
             <div className='last_block'>
                 <main className='rule_block'>

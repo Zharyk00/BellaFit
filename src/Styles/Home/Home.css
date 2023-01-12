@@ -16,6 +16,26 @@
     width: 100%;
   }
 }
+.main_home_content .content .fitness {
+  font-size: 120px;
+  left: 290px;
+  top: 400px;
+  position: absolute;
+  font-family: "Amatic SC", sans-serif;
+  letter-spacing: 65px;
+  color: #fff;
+  opacity: 0.2;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 415px) {
+  .main_home_content .content .fitness {
+    font-size: 50px;
+    letter-spacing: 10px;
+    left: 60px;
+    top: 275px;
+  }
+}
 .main_home_content .content .home_content {
   display: grid;
   row-gap: 50px;
@@ -147,6 +167,8 @@
 @media (max-width: 415px) {
   .main_home_content .back_image {
     height: 500px;
+    grid-template-rows: 0.2fr 1fr;
+    background-position: center;
   }
 }
 .main_home_content .back_image .front_content {
@@ -172,6 +194,11 @@
   box-sizing: border-box;
   backgroud-color: rgba(255, 99, 71, 0.1);
 }
+@media (max-width: 415px) {
+  .main_home_content .back_image .front_content .aside_content {
+    height: 350px;
+  }
+}
 .main_home_content .back_image .front_content .aside_content h1 {
   font-size: 35px;
   line-height: 30px;
@@ -185,6 +212,11 @@
   width: 280px;
   background-color: #FAFF05;
   box-sizing: border-box;
+}
+@media (max-width: 415px) {
+  .main_home_content .back_image .front_content .center_content {
+    height: 350px;
+  }
 }
 .main_home_content .back_image .front_content .center_content h1 {
   font-size: 35px;
