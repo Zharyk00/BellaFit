@@ -8,7 +8,7 @@ import "./styles.css";
 import { Pagination } from "swiper";
 
 function Home() {
-    const [value, setValue] = useState(true)
+    const [value, setValue] = useState(500)
     function reportWindowSize() {
         let size = window.innerWidth;
         setValue(size)
@@ -38,8 +38,6 @@ function Home() {
                     <p>that inspire you to perform and luxury amenities that keep you feeling
                         your best.</p><p>10,000+ classes at your fingertips.
                             World-class trainers and fitness brands, all in one place.</p>
-
-
                 </div>
                 <button className='shop_button'>SHOP PACKAGE</button>
             </div>

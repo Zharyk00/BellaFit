@@ -15,12 +15,12 @@ function Nav() {
             </div>
             <section className='nav_contents'>
                 <figure className='logo'>
-                    <Link to={'/home'} className='circle'>
+                    <Link to={'/'} className='circle'>
                         <div className='vertical_lines'></div>
                         <div className='vertical_lines'></div>
                         <div className='horizontal_line'></div>
                     </Link>
-                    <figcaption><Link to={'/home'}>BellaFit</Link></figcaption>
+                    <figcaption><Link to={'/'}>BellaFit</Link></figcaption>
                 </figure>
                 <article><GiHamburgerMenu /></article>
                 <nav className='nav_links'>
