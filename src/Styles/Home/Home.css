@@ -1,0 +1,181 @@
+.main_home_content {
+  display: grid;
+}
+.main_home_content .content {
+  display: grid;
+  margin-bottom: 100px;
+  background-color: #C3140F;
+  height: 600px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.main_home_content .content .home_content {
+  display: grid;
+  row-gap: 50px;
+  place-content: center;
+}
+.main_home_content .content .home_content .home_header {
+  font-size: 40px;
+  color: white;
+}
+.main_home_content .content .home_content .home_button {
+  width: 130px;
+  height: 36px;
+  background: #FAFF05;
+  border: none;
+  font-weight: bold;
+}
+.main_home_content .content .home_image {
+  display: grid;
+  align-content: end;
+  justify-content: center;
+}
+.main_home_content .content .home_image .back_frame {
+  display: grid;
+  place-content: center;
+  height: 410px;
+  align-self: end;
+  width: 350px;
+  border: 30px solid #FAFF05;
+}
+.main_home_content .content .home_image .img {
+  display: grid;
+  justify-self: center;
+  z-index: 1;
+  background-image: url("woman.png");
+  height: 550px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main_home_content .content .home_image > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.main_home_content .info_block {
+  display: grid;
+  margin-bottom: 100px;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 60%;
+  row-gap: 30px;
+  line-height: 36px;
+}
+.main_home_content .info_block .bellafit_info {
+  display: grid;
+  justify-items: center;
+  font-size: 25px;
+}
+.main_home_content .info_block .bellafit {
+  font-size: 20px;
+  color: #8A8A8A;
+}
+.main_home_content .info_block .shop_button {
+  width: 130px;
+  height: 36px;
+  background: #FAFF05;
+  border: none;
+  font-weight: bold;
+}
+.main_home_content .back_image {
+  display: grid;
+  grid-template-columns: 0.8fr;
+  justify-content: center;
+  grid-auto-flow: row;
+  grid-template-rows: 0.8fr 1fr;
+  background-image: url("Image-Woman.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 100%;
+}
+.main_home_content .back_image .front_content {
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: center;
+  color: white;
+  text-align: center;
+}
+.main_home_content .back_image .front_content .aside_content {
+  display: grid;
+  padding: 0px 10px;
+  height: 200px;
+  width: 280px;
+  border: 1px groove #929191;
+  border-top: none;
+  box-sizing: border-box;
+  backgroud-color: rgba(255, 99, 71, 0.1);
+}
+.main_home_content .back_image .front_content .aside_content h1 {
+  font-size: 35px;
+  line-height: 30px;
+  letter-spacing: 8px;
+}
+.main_home_content .back_image .front_content .center_content {
+  display: grid;
+  padding: 0px 10px;
+  color: black;
+  height: 260px;
+  width: 280px;
+  background-color: #FAFF05;
+  box-sizing: border-box;
+}
+.main_home_content .back_image .front_content .center_content h1 {
+  font-size: 35px;
+  line-height: 30px;
+  letter-spacing: 12px;
+}
+.main_home_content .back_image .front_content .center_content .inner_content {
+  display: grid;
+  padding-left: 10px;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.main_home_content .back_image .front_content .center_content .inner_content .circle {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.main_home_content .last_block {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  background-image: url("1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
+  width: 100%;
+}
+.main_home_content .last_block .rule_block {
+  display: grid;
+  place-items: center;
+  row-gap: 30px;
+  height: 500px;
+  width: 350px;
+  margin: 100px 200px 0px 0px;
+  background-color: #CCCFD8;
+}
+.main_home_content .last_block .rule_block section {
+  display: grid;
+  justify-items: start;
+  row-gap: 10px;
+  padding: 0px 40px;
+}
+.main_home_content .last_block .rule_block section .header {
+  display: grid;
+  grid-auto-flow: column;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.main_home_content .last_block .rule_block section .header div {
+  border: 1px solid #FAFF05;
+  transform: rotate(90deg);
+  margin-left: 12px;
+}/*# sourceMappingURL=Home.css.map */

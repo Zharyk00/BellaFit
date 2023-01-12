@@ -1,0 +1,83 @@
+.main_nav_content
+    display: grid
+    grid-auto-flow: row
+    grid-template-rows: 40px 80px
+
+    @media (max-width: 415px)
+        grid-template-rows: 60px
+
+    .offer
+        display: grid
+        place-content: center
+        background-color: #FAFF05
+        font-family: 'Josefin Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 24px
+        text-transform: capitalize
+        color: #100E18
+        @media (max-width: 415px)
+            display: none
+    .nav_contents
+        display: grid
+        place-items: center
+        grid-template-columns: 1fr 2fr 1fr
+        background-color: #FFFFFF
+        grid-auto-flow: column
+        @media (max-width: 415px)
+            grid-template-columns: 1fr 1fr
+        .logo
+            display: grid
+            grid-auto-flow: column
+            align-items: center
+            column-gap: 10px
+            @media (max-width: 415px)
+                display: none
+            .circle
+                display: grid
+                grid-auto-flow: column
+                width: 40px
+                height: 40px
+                background: #100E18
+                border-radius: 50%
+                justify-content: center
+                align-items: center
+                column-gap: 5px
+                .vertical_lines
+                    height: 10.59px
+                    border: 1px solid #FAFF05
+                .horizontal_line
+                    width: 10.59px
+                    border: 1px solid #FAFF05
+
+        .nav_links
+            display: grid
+            grid-auto-flow: column
+            justify-content: center
+            column-gap: 50px
+            color: #100E18
+            a
+                color: #100E18
+                font-size: 20px
+        .burger_menu
+            display: grid
+            grid-auto-flow: row
+            z-index: 1
+            row-gap: 20px
+
+        .icons
+            display: grid
+            grid-auto-flow: column
+            justify-content: center
+            column-gap: 30px
+            font-size: 18px
+            @media (max-width: 415px)
+                display: grid
+
+            .div
+                position: absolute
+                text-align: center
+                sup
+                    bottom: 15px
+                    left: 10px
