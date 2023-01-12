@@ -189,9 +189,9 @@ function Home() {
                 </main>
                 <hr style={{ backgroundColor: 'grey', height: '2px', border: 'none' }} />
                 <div className='last_footer_cont'>
-                    <h4>COOKIES POLICY</h4>
-                    <h4> LEGAL TERMS</h4>
-                    <h4 >PRIVACY POLICY</h4>
+                    <h5>COOKIES POLICY</h5>
+                    <h5> LEGAL TERMS</h5>
+                    <h5 >PRIVACY POLICY</h5>
                 </div>
             </footer>
         </div>
